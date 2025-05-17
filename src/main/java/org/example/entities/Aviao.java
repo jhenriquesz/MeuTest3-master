@@ -6,7 +6,7 @@ public class Aviao {
     private int capacidade;
     private String fabricante;
 
-    public Aviao(int id, String modelo, int capacidade, String fabricante) {
+    public Aviao(String modelo, int capacidade, String fabricante) {
         this.id = id;
         this.modelo = modelo;
         this.capacidade = capacidade;

@@ -1,10 +1,13 @@
 package org.example.facade;
 
 import org.example.entities.Passageiro;
+import org.example.entities.Voo;
 import org.example.repositories.PassageiroRepository;
 import org.example.services.PassageiroService;
 
 import java.util.List;
+
+import static java.util.Locale.filter;
 
 public class PassageiroFacade {
     private final PassageiroRepository repository = new PassageiroRepository();
@@ -28,4 +31,11 @@ public class PassageiroFacade {
     public List<Passageiro> listarPassageiros() {
         return repository.ListarTodos();
     }
+    public Passageiro buscarPorId(int id) {
+        return repository.ListarTodos().stream()
+                .filter(p -> p.getId() == id)
+                .findFirst()
+                .orElse(null);
+    }
+
 }

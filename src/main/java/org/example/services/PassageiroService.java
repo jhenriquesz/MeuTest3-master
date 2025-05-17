@@ -1,5 +1,7 @@
 package org.example.services;
 
+import org.example.entities.Passageiro;
+
 import java.util.regex.Pattern;
 
 public class PassageiroService {
@@ -33,6 +35,10 @@ public class PassageiroService {
     public boolean validarEmail(String email) {
         String regex = "^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$";
         return Pattern.matches(regex, email);
+    }
+    public Passageiro buscarPorId(int id) {
+        PassageiroService passageiroRepository = null;
+        return passageiroRepository.buscarPorId(id);
     }
 
 }

@@ -5,10 +5,10 @@ import java.time.LocalDateTime;
 public class Reserva {
     private int id;
     private Passageiro passageiro;
-    private Voo voo;
+    Voo voo;
     private LocalDateTime dateTime;
 
-    public Reserva(int id, Passageiro passageiro, Voo voo, LocalDateTime dateTime) {
+    public Reserva(Passageiro passageiro, Voo voo, LocalDateTime dateTime) {
         this.id = id;
         this.passageiro = passageiro;
         this.voo = voo;

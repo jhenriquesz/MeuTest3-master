@@ -1,5 +1,7 @@
 package org.example.entities;
 
+import java.util.Locale;
+
 public class Passageiro {
 
     int id;
@@ -13,6 +15,12 @@ public class Passageiro {
         this.cpf = cpf;
         this.email = email;
     }
+
+    public static Locale stream() {
+
+        return null;
+    }
+
 
     public int getId() {
         return id;

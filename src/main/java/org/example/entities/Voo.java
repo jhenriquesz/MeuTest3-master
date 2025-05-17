@@ -3,13 +3,14 @@ package org.example.entities;
 import java.time.LocalDateTime;
 
 public class Voo {
-    private int id;
+    private static int id;
     private String origem;
     private String destino;
     private LocalDateTime dateTime;
-    private Aviao aviao;
+    private static Aviao aviao;
+    private int vagasDisponiveis;
 
-    public Voo(int id, String origem, String destino, LocalDateTime dateTime, Aviao aviao) {
+    public Voo(String origem, String destino, LocalDateTime dateTime, Aviao aviao) {
         this.id = id;
         this.origem = origem;
         this.destino = destino;
@@ -17,12 +18,12 @@ public class Voo {
         this.aviao = aviao;
     }
 
-    public int getId() {
+    public static int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public static void setId(int id) {
+        Voo.id = id;
     }
 
     public String getOrigem() {
@@ -49,11 +50,19 @@ public class Voo {
         this.dateTime = dateTime;
     }
 
-    public Aviao getAviao() {
+    public static Aviao getAviao() {
         return aviao;
     }
 
     public void setAviao(Aviao aviao) {
         this.aviao = aviao;
+    }
+
+    public int getVagasDisponiveis() {
+        return vagasDisponiveis;
+    }
+
+    public void setVagasDisponiveis(int vagasDisponiveis) {
+        this.vagasDisponiveis = vagasDisponiveis;
     }
 }

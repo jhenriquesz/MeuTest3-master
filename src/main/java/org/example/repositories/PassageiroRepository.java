@@ -1,6 +1,7 @@
 package org.example.repositories;
 
 import org.example.entities.Passageiro;
+import org.example.entities.Voo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class PassageiroRepository {
         public List<Passageiro> ListarTodos(){
             return passageiros;
         }
+
     }
 
 
